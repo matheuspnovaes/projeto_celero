@@ -45,3 +45,14 @@ def model_training(X_train, y_train):
     model = LinearSVC(C=0.01)
     model.fit(X_train,y_train)
     return model
+
+
+# dicionario para selecionar treinamento ou execução 
+optionDic={
+    '1': modo_treinamento,
+    '2': modo_execucao
+}    
+def main(argv):
+    optionDic[argv[1]](argv)        
+if __name__ == "__main__":
+   main(sys.argv)       
