@@ -44,3 +44,15 @@ def textProcess(review):
     review = exp_htmlTag.sub(" ",review)
 	
     return review
+
+# convertendo o texto em vetor: Bag of words    
+def vectorizer_data(reviews_list):
+    review_vectorizer = CountVectorizer(binary=True, ngram_range=(1, 3), 
+									stop_words=['in', 'of', 'at', 'a', 'the'])
+    review_vectorizer.fit(reviews_list)
+    # salvando o vocabulario
+    joblib.dump(review_vectorizer, "review_vectorizer.pkl")
+    # dados tratados e vetorizados
+    X_data = review_vectorizer.transform(reviews_list)
+    
+    return X_data
