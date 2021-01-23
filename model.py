@@ -40,3 +40,8 @@ def modo_treinamento(argv):
         print("python model.py <opção> <\"diretorio\"> <rotulos>")
         sys.exit(2)  
 
+
+def model_training(X_train, y_train):       
+    model = LinearSVC(C=0.01)
+    model.fit(X_train,y_train)
+    return model
