@@ -63,7 +63,7 @@ def vectorizer_data(reviews_list):
 def save_pkl(fileToSave, path):
     with gzip.open(path, "wb") as file:
         pickled =  pickle.dumps(fileToSave)
-        optmized_pickle = pickletools.optimize(pickled)
+        optimized_pickle = pickletools.optimize(pickled)
         file.write(optimized_pickle)
 
 # carregar modelo já treinado 
