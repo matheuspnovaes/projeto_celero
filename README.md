@@ -11,6 +11,13 @@ soluções utilizando a linguagem de programação Python.
 
 ## 1.1 Objetivo 
 
-O objetivo foi criar classificador de comentário de filmes, utilizando o cojunto de dados [Large Movie Review Dataset]
-(http://ai.stanford.edu/~amaas/data/sentiment/). O modelo preditivo determinar se um comentário é negativo ou positivo
+O objetivo foi criar classificador de comentário de filmes, utilizando o cojunto de dados 
+[Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/). 
+O modelo preditivo determinar se um comentário é negativo ou positivo
 A métrica utlizada para avalição foi a [Acurácia](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) 
+
+## 1.2 Cojunto de dados: Descrição
+
+O [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) é um conjunto de 
+dados para a classifcação binária de sentimento. Este dataset contém 50 mil reviews de filmes 
+divididos em 25 mil para treino 25 mil para teste. Os reviews são rotulados como positivos ou negativos. 
