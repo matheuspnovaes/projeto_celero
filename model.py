@@ -6,6 +6,8 @@ import numpy as np
 import joblib
 import pickle
 
+import math
+
 
 from sklearn.metrics import accuracy_score
 from sklearn.feature_extraction.text import CountVectorizer
@@ -45,7 +47,7 @@ def modo_treinamento(argv):
             svm_model =  model_training(X_train, y_train)
             print("treinamento concluido")
             acuracia_vali = accuracy_score(y_vali, svm_model.predict(X_vali))
-            print("Acuracia: %s"% acuracia_vali)
+            print("Acuracia da validação: %s"% acuracia_vali)
             file_model = "svm_model_trained.pkl"
             print("Salvando o modelo treinado...")
             save_pkl(svm_model, file_model)
@@ -59,7 +61,6 @@ def modo_execucao(argv):
     reviews_list = []
     file_teste = ''
     review_vectorizer = load_pkl("review_vectorizer.pkl")
-    print(len(argv))
     if (len(argv)==3):
         file_teste = argv[2]
         if not os.path.exists(file_teste):
@@ -68,11 +69,11 @@ def modo_execucao(argv):
             with open(file_teste,'r',encoding="utf8") as file:
                 for line in file:
                     reviews_list.append(textProcess(line.strip()))    
-            print("Vetorizando os dados...")
+            print("Vetorizando a entrada...")
             X_data = review_vectorizer.transform(reviews_list)
             svm_model = load_pkl('svm_model_trained.pkl')
             result = svm_model.predict(X_data)
-            print("Classificação do review: %s"% result[0])
+            print("Classificação do review: %s"% math.trunc(int(result[0])))
     else:
         print("Erro: O camando de entrada deve ser da seguinte forma:")
         print("python model.py <opção> <arquivo_teste>")
