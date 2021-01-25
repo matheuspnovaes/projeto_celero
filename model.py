@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 
 
-from utils import open_reviews, textProcess, vectorizer_data, save_model, load_model
+from utils import open_reviews, textProcess, vectorizer_data, save_pkl, load_pkl
 
 # opcao do modelo em modo de treinamento
 def modo_treinamento(argv):
@@ -48,9 +48,9 @@ def modo_treinamento(argv):
             print("treinamento concluido")
             acuracia_vali = accuracy_score(y_vali, svm_model.predict(X_vali))
             print("Acuracia: %s"% acuracia_vali)
-            file_model = "svm_model_trained.sav"
+            file_model = "svm_model_trained.pkl"
             print("Salvando o modelo treinado...")
-            pickle.dump(svm_model,open(file_model,"wb"))
+            save_pkl(svm_model, file_model)
     else:
     
         print("Erro: O camando de entrada deve ser da seguinte forma:")
@@ -60,7 +60,7 @@ def modo_treinamento(argv):
 def modo_execucao(argv):
     reviews_list = []
     file_teste = ''
-    review_vectorizer = joblib.load("review_vectorizer.pkl")
+    review_vectorizer = load_pkl("review_vectorizer.pkl")
     print(len(argv))
     if (len(argv)==3):
         file_teste = argv[2]
@@ -72,7 +72,7 @@ def modo_execucao(argv):
                     reviews_list.append(textProcess(line.strip()))    
             print("Vetorizando os dados...")
             X_data = review_vectorizer.transform(reviews_list)
-            svm_model = load_model()
+            svm_model = load_pkl('svm_model_trained.pkl')
             result = svm_model.predict(X_data)
             print("Classificação do review: %s"% result[0])
     else:
