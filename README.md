@@ -35,6 +35,79 @@ conta com as funções de treinamento e execução.
 - `requirements.txt` contêm todas as dependências que são requeridas pela aplicação
 - `review_vectorizer.pkl` arquivo com o dicionário salvo dos dados de treinamento.
 - `svm_model_trained.pkl` arquivo com o modelo SVM já treinado.
-- `utilis.py` contêm as funcionabilidades da aplicação.
+- `utils.py` contêm as funcionabilidades da aplicação.
+
+# # 2.1 Documentação
+
+- `model.py`: 
+
+```python
+def main(argv):
+# a função define será a aplicação será iniciada 
+# em modo treinamento ou execução
+
+#  argv: parâmetros da incilização da aplicação
+
+def modo_treinamento(argv):
+# função utilizada para executar a aplicação 
+# em modo de treinamento
+# argv: parâmetro com diretório dos arquivos
+# de treinamento e o arquivo de rotulo.
 
 
+def modo_execucao(argv):
+# função utilizada para execução a aplição após
+# o treinamento
+# argv: parâmetro com o nome do arquivo para classificação
+
+
+def model_training(X_train, y_train):
+# função para treinar o modelo
+# X_train: cojunto de dados de treinamento
+# y_train: resultado esperado do cojunto de treinamento 
+```
+
+- `utils.py`: 
+```python
+
+def open_reviews(directory):
+# função para abrir os reviews
+# directory: diretório com os reviews
+# retorna uma lista contendo os reviews
+
+def textProcess(review):
+# processa o review para eliminar
+# pontuações e tags html
+# review: texto para ser processado
+# retorna review  processado
+
+def vectorizer_data(reviews_list):
+# converte o texto em vetor: Bag of words
+# reviews_list: recebe uma lista com reviews
+# retorna X_data contendo os dados vetorizados
+
+def save_pkl(fileToSave, path):
+# salva determinado dado em um arquivo pkl
+# fileToSave: dado para ser salvo
+# path: diretório para salvar o dado
+
+def load_pkl(pkl_path):
+# carrega determinado dado que foi
+# salvo em um arquivo pkl
+# pkl_path: diretório do arquivo p
+# para ser aberto 
+# retorna o arquivo lido
+  
+```
+
+
+# 3 Ambiente virtual 
+
+Este projeto é executado em um ambiente virtual. Um ambiente virtual é uma instalação Python 
+específica que gerencia seus próprios binários e pacotes. Uma grande vantagem que isso oferece
+é que cada projeto  tem seu próprio ambiente sem nenhuma configuração global.
+
+Veja maiores detalhes de [ambiente virtual](https://docs.python.org/pt-br/3/library/venv.html) em sua documentação.
+
+
+# 4
