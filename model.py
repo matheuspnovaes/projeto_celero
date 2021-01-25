@@ -22,10 +22,7 @@ def modo_treinamento(argv):
     
     if (len(argv)==4):
         directory = argv[2]
-        file_labels = argv[3]
-        print(file_labels)
-        path_labels = os.path.join(directory, file_labels)
-        
+        file_labels = argv[3] 
         try:
             label = np.genfromtxt(file_labels,  delimiter=',')
         except:
@@ -35,6 +32,7 @@ def modo_treinamento(argv):
             print("O diretório não existe")
             sys.exit(2)
         else:
+            print("Lendo os arquivos...")
             reviews_list = open_reviews(directory)
             
             print("Vetorizando os  dados...")

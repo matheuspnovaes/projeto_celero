@@ -67,7 +67,7 @@ def save_pkl(fileToSave, path):
         file.write(optimized_pickle)
 
 # carregar modelo já treinado 
-def load_pkl(pkl_path)
+def load_pkl(pkl_path):
     with gzip.open(pkl_path, 'rb') as f:
         p = pickle.Unpickler(f)
         loaded_pkl = p.load()
