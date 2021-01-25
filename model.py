@@ -5,7 +5,7 @@ import numpy as np
 
 import joblib
 import pickle
-#import pandas as pd
+
 
 from sklearn.metrics import accuracy_score
 from sklearn.feature_extraction.text import CountVectorizer
@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 
 
-from utils import open_reviews, textProcess, vectorizer_data
+from utils import open_reviews, textProcess, vectorizer_data, save_model, load_model
 
 # opcao do modelo em modo de treinamento
 def modo_treinamento(argv):
@@ -72,7 +72,7 @@ def modo_execucao(argv):
                     reviews_list.append(textProcess(line.strip()))    
             print("Vetorizando os dados...")
             X_data = review_vectorizer.transform(reviews_list)
-            svm_model = pickle.load(open('svm_model_trained.sav', 'rb'))
+            svm_model = load_model()
             result = svm_model.predict(X_data)
             print("Classificação do review: %s"% result[0])
     else:
