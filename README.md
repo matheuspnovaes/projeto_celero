@@ -11,9 +11,9 @@ soluções utilizando a linguagem de programação Python.
 
 ## 1.1 Objetivo 
 
-O objetivo foi criar classificador de comentário de filmes, utilizando o cojunto de dados 
+O objetivo foi criar um classificador de comentário de filmes, utilizando o cojunto de dados 
 [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/). 
-O modelo preditivo determinar se um comentário é negativo ou positivo
+O modelo preditivo determina se um comentário é negativo ou positivo
 A métrica utlizada para avalição foi a [Acurácia](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) 
 
 ## 1.2 Cojunto de dados: Descrição
@@ -45,7 +45,7 @@ conta com as funções de treinamento e execução.
 def main(argv):
 # a função define se a aplicação será iniciada 
 # em modo treinamento ou execução
-#  argv: parâmetros da incilização da aplicação
+#  argv: parâmetros da iincilização da aplicação
 
 def modo_treinamento(argv):
 # função utilizada para executar a aplicação 
@@ -55,8 +55,8 @@ def modo_treinamento(argv):
 
 
 def modo_execucao(argv):
-# função utilizada para execução a aplição após
-# o treinamento
+# função utilizada para executar a aplição 
+# em modo de execução
 # argv: parâmetro com o nome do arquivo para classificação
 
 
@@ -78,7 +78,7 @@ def textProcess(review):
 # processa o review para eliminar
 # pontuações e tags html
 # review: texto para ser processado
-# retorna review  processado
+# retorna o review  processado
 
 def vectorizer_data(reviews_list):
 # converte o texto em vetor: Bag of words
@@ -130,7 +130,7 @@ Veja maiores detalhes de [ambiente virtual](https://docs.python.org/pt-br/3/libr
  - `<opção>` = 1 para treinamento
  - `<"diretorio">`: caminho para o diretório contendo os
     reviews dentro de arquivos `.txt`
- - `<"rotulos>`: arquivo `.txt` com o resultado dos reviews.
+ - `<"rotulos">`: arquivo `.txt` com o resultado dos reviews.
  Cada linha do arquivo representa o resultado de um review.
  1 para reviews positivos e -1 para reviews negativos. 
  
