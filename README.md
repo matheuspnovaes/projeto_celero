@@ -1,7 +1,7 @@
 # <center> Projeto: Classificador de comentários de filmes.</center> 
 <center> <span style="color:blue; font-size: 1.5em;">Matheus Pereira de Novaes</span></center>
 <center> <span style="color:blue; font-size: 1.0em;">matheuspnovaes@gmail.com</span></center>
-<center> <span style="color:red">25 de janeiro de 2021</span> </center>
+<center> <span style="color:red">26 de janeiro de 2021</span> </center>
 
 # 1. Introdução 
 
