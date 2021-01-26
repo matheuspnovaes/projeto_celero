@@ -117,7 +117,7 @@ Veja maiores detalhes de [ambiente virtual](https://docs.python.org/pt-br/3/libr
 
 # # 4.2: Criar um novo projeto
 1. Clonar este projeto 
-2. Criar um novo ambiente virtual e ativá-lo
+2. Criar um novo ambiente virtual e ativá-lo, utilizando o `virtualenv`
 3. No ambiente virtual criado, instalar os pacotes requeridos:
    ```sh
     pip install -r requirements.txt
@@ -125,26 +125,26 @@ Veja maiores detalhes de [ambiente virtual](https://docs.python.org/pt-br/3/libr
 # # 4.3 Aplicação em modo de treinamento
 1. Executar o `model.py` com os seguintes parâmetros
  ```sh
-    python model.py <opção> <"diretorio"> <rotulos>"
+    python model.py <opção> <"diretorio"> <rotulos>
  ```
  - `<opção>` = 1 para treinamento
  - `<"diretorio">`: caminho para o diretório contendo os
     reviews dentro de arquivos `.txt`
  - `<rotulos>`: arquivo `.txt` com o resultado dos reviews.
- Cada linha do arquivo representa o resutlado de um review.
- 1 para reviews positivos e -1 para comentários reviews. 
+ Cada linha do arquivo representa o resultado de um review.
+ 1 para reviews positivos e -1 para reviews negativos. 
  
  ```sh
-    python model.py 1  "C:\Users\projeto_celero\train" rotulos.txt"
+    python model.py 1 "C:\Users\projeto_celero\train" rotulos.txt
  ```
 
 # # 4.4 Aplicação em modo execução
-1. Executar o `model.py` com os seguintes parâmetros
+1. Executar o `model.py` com os seguintes parâmetros:
   ```sh
-     python model.py <opção> <review.txt>"
+     python model.py <opção> <review.txt>
   ```
   - `<opção>` = 2 para modo execução
-  - `<review.txt>` : arquivo texto com o review 
+  - `<review.txt>` : arquivo `.txt` com o review 
    ```sh
-    python model.py 2  0_2.txt"
+    python model.py 2 0_2.txt
  ```
