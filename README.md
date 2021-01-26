@@ -5,7 +5,7 @@
 
 # 1. Introdução 
 
-Este projeto é um desafio proposto pela CELERO com a finiladade de testar as habilidades e conhecimento de algoritmos de classificação
+Este projeto é um desafio proposto pela CELERO com a finalidade de testar as habilidades e conhecimento de algoritmos de classificação
 com base em aprendizado de máquinas supervisionado, assim como a implementação destas 
 soluções utilizando a linguagem de programação Python.
 
@@ -125,26 +125,26 @@ Veja maiores detalhes de [ambiente virtual](https://docs.python.org/pt-br/3/libr
 # # 4.3 Aplicação em modo de treinamento
 1. Executar o `model.py` com os seguintes parâmetros
  ```sh
-    python model.py <opção> <"diretorio"> <rotulos>
+    python model.py <opção> <"diretorio"> <"rotulos">
  ```
  - `<opção>` = 1 para treinamento
  - `<"diretorio">`: caminho para o diretório contendo os
     reviews dentro de arquivos `.txt`
- - `<rotulos>`: arquivo `.txt` com o resultado dos reviews.
+ - `<"rotulos>`: arquivo `.txt` com o resultado dos reviews.
  Cada linha do arquivo representa o resultado de um review.
  1 para reviews positivos e -1 para reviews negativos. 
  
  ```sh
-    python model.py 1 "C:\Users\projeto_celero\train" rotulos.txt
+    python model.py 1 "C:\Users\projeto_celero\train" "C:\Users\projeto_celero\rotulos.txt"
  ```
 
 # # 4.4 Aplicação em modo execução
 1. Executar o `model.py` com os seguintes parâmetros:
   ```sh
-     python model.py <opção> <review.txt>
+     python model.py <opção> <"review.txt">
   ```
   - `<opção>` = 2 para modo execução
-  - `<review.txt>` : arquivo `.txt` com o review 
+  - `<"review.txt">` : arquivo `.txt` com o review 
    ```sh
-    python model.py 2 0_2.txt
+    python model.py 2 "C:\Users\projeto_celero\teste\0_2.txt"
  ```
