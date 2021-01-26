@@ -27,8 +27,8 @@ divididos em 25 mil para treino 25 mil para teste. Os reviews são rotulados com
 Os arquivos que compõem o projeto são explicados a seguir: 
 
 - `.gitignore` é importante devido a geração de arquivos adicionais 
-que serão gerados por outros processo. Sua utilização é útil para
-`git clean` antes de comportilhar o código no `git`
+que serão gerados por outros processos. Sua utilização é útil para
+`git clean` antes de compartilhar o código no `git`
 - `README.md` contêm a descrição e documentação do projeto.
 - `model.py` contêm a definição do modelo de classificação utilizado. Além disso, 
 conta com as funções de treinamento e execução.
@@ -43,9 +43,8 @@ conta com as funções de treinamento e execução.
 
 ```python
 def main(argv):
-# a função define será a aplicação será iniciada 
+# a função define se a aplicação será iniciada 
 # em modo treinamento ou execução
-
 #  argv: parâmetros da incilização da aplicação
 
 def modo_treinamento(argv):
@@ -110,4 +109,42 @@ específica que gerencia seus próprios binários e pacotes. Uma grande vantagem
 Veja maiores detalhes de [ambiente virtual](https://docs.python.org/pt-br/3/library/venv.html) em sua documentação.
 
 
-# 4
+# 4 Utilizando a aplicação
+
+# # 4.1 Instalar os requirements
+1. Instalar o Python 3
+2. Instalar o `virtualenv`
+
+# # 4.2: Criar um novo projeto
+1. Clonar este projeto 
+2. Criar um novo ambiente virtual e ativá-lo
+3. No ambiente virtual criado, instalar os pacotes requeridos:
+   ```sh
+    pip install -r requirements.txt
+    ``` 
+# # 4.3 Aplicação em modo de treinamento
+1. Executar o `model.py` com os seguintes parâmetros
+ ```sh
+    python model.py <opção> <"diretorio"> <rotulos>"
+ ```
+ - `<opção>` = 1 para treinamento
+ - `<"diretorio">`: caminho para o diretório contendo os
+    reviews dentro de arquivos `.txt`
+ - `<rotulos>`: arquivo `.txt` com o resultado dos reviews.
+ Cada linha do arquivo representa o resutlado de um review.
+ 1 para reviews positivos e -1 para comentários reviews. 
+ 
+ ```sh
+    python model.py 1  "C:\Users\projeto_celero\train" rotulos.txt"
+ ```
+
+# # 4.4 Aplicação em modo execução
+1. Executar o `model.py` com os seguintes parâmetros
+  ```sh
+     python model.py <opção> <review.txt>"
+  ```
+  - `<opção>` = 2 para modo execução
+  - `<review.txt>` : arquivo texto com o review 
+   ```sh
+    python model.py 2  0_2.txt"
+ ```
