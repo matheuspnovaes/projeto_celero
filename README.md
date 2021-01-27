@@ -19,7 +19,7 @@ A métrica utlizada para avalição foi a [Acurácia](https://scikit-learn.org/s
 ## 1.2 Cojunto de dados: Descrição
 
 O [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) é um conjunto de 
-dados para a classifcação binária de sentimento. Este dataset contêm 50 mil reviews de filmes 
+dados para a classifcação binária de sentimento. Este dataset contém 50 mil reviews de filmes 
 divididos em 25 mil para treino 25 mil para teste. Os reviews são rotulados como positivos ou negativos. 
 
 # 2 Organização do projeto
@@ -29,13 +29,13 @@ Os arquivos que compõem o projeto são explicados a seguir:
 - `.gitignore` é importante devido a geração de arquivos adicionais 
 que serão gerados por outros processos. Sua utilização é útil para
 `git clean` antes de compartilhar o código no `git`
-- `README.md` contêm a descrição e documentação do projeto.
-- `model.py` contêm a definição do modelo de classificação utilizado. Além disso, 
+- `README.md` contém a descrição e documentação do projeto.
+- `model.py` contém a definição do modelo de classificação utilizado. Além disso, 
 conta com as funções de treinamento e execução.
-- `requirements.txt` contêm todas as dependências que são requeridas pela aplicação
+- `requirements.txt` contém todas as dependências que são requeridas pela aplicação
 - `review_vectorizer.pkl` arquivo com o dicionário salvo dos dados de treinamento.
 - `svm_model_trained.pkl` arquivo com o modelo SVM já treinado.
-- `utils.py` contêm as funcionabilidades da aplicação.
+- `utils.py` contém as funcionabilidades da aplicação.
 
 # # 2.1 Documentação
 
